@@ -116,3 +116,75 @@ Master´Â ÇöÀç ¼­¹ö¿¡ ¿Ã·ÁÁ® ÀÖ´Â ¿ÏÀüÇÏ°Ô È®ÀÎµÈ ÄÚµåÀÌ¸ç
 Branch´Â ÀÛ¾÷À» À§ÇØ ÇØ´çµÇ´Â ±¸¿ª¸¸À» °³ÀÎ ÀúÀå¼Ò·Î °¡Á®¿À¸ç
 ÄÚµå¸¦ ´Ù ÀÛ¼ºÇÑ ÈÄ¿¡ ¼­¹ö¿¡ ¿Ã¸®¸é °ËÅä ÈÄ ¹®Á¦ ¾øÀ» ½Ã¿¡
 MasterÀÇ ÄÚµå¿Í ÇÕÃÄÁØ´Ù.
+
+
+####¸®´ª½º Ä¿³Î
+1. ¸®´ª½º Ä¿³ÎÀÌ¶õ ¸®´©½º Åä¹ßÁî¸¦ À§½ÃÇÑ ¼¼°è °¢ÁöÀÇ °³¹ßÀÚ¿¡ 
+ÀÇÇØ °³¹ßµÇ°í ÀÖ´Â ¸®´ª½º¸¦ ¶æÇÑ´Ù.
+
+¸®´ª½º Ä¿³ÎÀº ¸»±×´ë·Î Ä¿³Î¸¸ ÀÖ±â ¶§¹®¿¡ ÀÌ°Í¸¸À¸·Î´Â ¾Æ¹«°Íµµ
+ÇÒ ¼ö°¡ ¾ø´Ù. ÀÌ Ä¿³Î¿¡ °¢ °³¹ß ¾÷Ã¼µéÀÌ ÄÄÆÄÀÏ·¯, ÆíÁý±â, 
+À¥ºê¶ó¿ìÀúµî°ú °°Àº ÀÀ¿ë ¾îÇÃ¸®ÄÉÀÌ¼ÇÀ» Ãß°¡ÇØ¼­ ¸¸µç °ÍÀ»
+¸®´ª½º ¹èÆ÷ÆÇÀÌ¶ó°í ÇÑ´Ù.
+
+2. ¸®´ª½º Ä¿³Î ¹öÀüÀº linux-2. 4. 18°°Àº Çü½ÄÀÎµ¥ Á¦ÀÏ ¾ÕÀÇ ¼ýÀÚ´Â
+¸ÞÀÌÀú ¹öÀüÀ¸·Î Ä¿³ÎÀÇ ±¸Á¶³ª ±â´É¿¡ ±Þ°ÝÇÑ º¯È­°¡ ÀÖÀ» ¶§
+¹Ù²î¸ç µÎ¹øÂ° ¼ýÀÚ´Â ¸¶ÀÌ³Ê ¹öÀüÀ¸·Î ³»ºÎ±¸Á¶¸é¿¡¼­ ¸¹Àº
+º¯È­°¡ ÀÖÀ» ¶§ ¹Ù²î´Â ¹öÀüÀÌ´Ù. ¶Ç ¸¶ÀÌ³Ê ¹öÀüÀÌ Â¦¼öÀÏ¶§´Â
+¾ÈÁ¤µÈ Ä¿³Î ¼Ò½ºÀÓÀ» ³ªÅ¸³»°í È¦¼öÀÏ¶§´Â ¾ÆÁ÷ °³¹ßÁßÀÎ ¹öÀüÀ»
+³ªÅ¸³½´Ù.
+
+3. À¯´Ð½º ½Ã½ºÅÛÀÇ ´ëÇ¥ÀûÀÎ Æ¯Â¡ Áß¿¡ ÇÏ³ª´Â user mode¿Í 
+kernel mode°¡ ³ª´²Á® ÀÖ´Ù´Â °ÍÀÎµ¥ ¸®´ª½º ¿ª½Ã À¯´Ð½º¸¦ ¸ðµ¨·Î 
+¸¸µé¾îÁ® ÀÖ¾î ÀÌ¸¦ µû¸¥´Ù.
+- Kernel mode Æ¯±Ç¸ðµå·Î ¸ðµç ÁÖ¼Ò°ø°£¿¡ Á¢±ÙÀÌ °¡´ÉÇÏ°í ¸ðµç
+¸í·ÉÀ» ¼öÇàÇÒ ¼ö ÀÖ´Ù.
+- user mode À¯Àú¸ðµå·Î ÀÚ½Å¿¡°Ô ÇÒ´çµÈ ÁÖ¼Ò °ø°£¸¸ Á¢±ÙÇÒ 
+¼ö ÀÖ°í Kernel modeÀÇ ÁÖ¼Ò °ø°£¿¡ ´ëÇØ¼­´Â Á¢±ÙÀÌ ºÒ°¡´ÉÇÏ´Ù.
+¶ÇÇÑ ½Ã½ºÅÛ¿¡ Ä¡¸íÀûÀÎ ¿µÇâÀ» ³¢¯‚ ¼ö ÀÖ´Â Æ¯±Ç ¸í·ÉÀº
+»ç¿ëÀÌ ºÒ°¡´ÉÇÏ´Ù.(lgdt, lidt, cli, stiµî)
+
+System Call Interface´Â user mode ÇÁ·Î¼¼½ºÀÎ ÀÀ¿ë ¾ÖÇÃ¸®ÄÉÀÌ¼ÇÀÌ
+Ä¿³ÎÀÇ ±â´ÉÀ» »ç¿ë °¡´ÉÇÏ°Ô ÇØÁØ´Ù. ½Ã½ºÅÛ ÄÝÀ» »ç¿ëÇÏ¸é
+Ä¿³Î ¸ðµåÀÇ ÇÔ¼ö³ª ÀÚ·á ±¸Á¶¿¡ Á¢±ÙÇÒ ¼ö ÀÖ°Ô µÈ´Ù´Â ¸»ÀÌ´Ù.
+
+4. Memory Management´Â ½Ã½ºÅÛ¿¡ ÀÖ´Â ¸Þ¸ð¸® ÀÚ¿øÀ» °ü¸®ÇÏ´Â
+ºÎºÐÀ¸·Î¼­ ¸®´ª½º´Â ¸Þ¸ð¸® °ü¸® ¾Ë°í¸®ÁòÀ¸·Î buddy slabÇÒ´çÀÚ¸¦
+»ç¿ëÇÑ´Ù.
+
+5. Task Management´Â ÅÂ½ºÅ©¸¦ °ü¸®ÇÏ´Â ºÎºÐÀÌ´Ù.
+(ÅÂ½ºÅ©´Â ÀÚ¿ø ¼ÒÀ¯±ÇÀÇ ´ÜÀ§ÀÌ´Ù) 
+±¸Ã¼ÀûÀ¸·Î´Â ÅÂ½ºÅ©ÀÇ »ý¼º,¼Ò¸ê,Áß´Ü µîÀ» ´ã´çÇÑ´Ù.
+
+6. IPC(InterProcess Communication)´Â °¡»óÁÖ¼Ò¸¦ »ç¿ëÇØ¼­ 
+ÇÁ·Î¼¼½º°£ Åë½ÅÀ» ´ã´çÇÏ´Â ºÎºÐÀÌ´Ù. ÀÌ¶§ ÆäÀÌÂ¡ ±â¹ýÀ»
+»ç¿ëÇÏ´Âµ¥ ÀÌ·Î½á ÁÖ¼Ò°ø°£À» ºÐ¸®ÇÏ¿© ´Ù¸¥ ÇÁ·Î¼¼½ºÀÇ
+ºñÁ¤»óÀûÀÌ°Å³ª ¾ÇÀÇÀûÀÎ ¼öÇàÀ¸·ÎºÎÅÍ º¸È£¸¦ ÇÏ°í ¾ÖÇÃ¸®ÄÉÀÌ¼ÇÀ»
+ÄÄÆÄÀÏÇÒ ¶§ ¼öÇà À§Ä¡¿¡ ´ëÇØ¼­ °í¹ÎÇÏÁö ¾Ê¾Æµµ µÈ´Ù´Â µîÀÇ
+ÀåÁ¡À» °¡Áö°Ô µÈ´Ù.
+
+7. VFS(Virtual File System)Àº °¢±â ´Ù¸¥ ÆÄÀÏ ½Ã½ºÅÛ, µð¹ÙÀÌ½º¿¡
+´ëÇØ¼­ open,read,write,closeµî°ú °°Àº µ¿ÀÏÇÑ ÀÎÅÍÆäÀÌ½º¸¦
+»ç¿ëÇÒ ¼ö ÀÖ°Ô ÇØÁØ´Ù.
+VFS·Î ÀÎÇØ¼­ ¸®´ª½º´Â ¿©·¯ ÆÄÀÏ ½Ã½ºÅÛÀ» »ç¿ëÇÒ ¼ö ÀÖ°Ô µÇ¾ú°í
+¿©·¯ ¿î¿µÃ¼Á¦¿Í ÇÔ²² °øÁ¸ÇÏ¸ç ÀÌ·¸°Ô ¼ºÀåÇÒ ¼ö ÀÖ°Ô µÇ¾ú´Ù.
+ 
+8. BSD Socket Interface´Â bind,connect,accept,send,recvµîÀ¸·Î
+´ëº¯µÇ´Â BSD socket interface¸¦ Á¦°øÇÑ´Ù.
+
+9. File StstemÀº ext2,ext3,vfat,jfsµîÀÇ ÆÄÀÏ ½Ã½ºÅÛÀ» Á¦°øÇÑ´Ù.
+
+10. Network Protocol StackÀº ipv4,ipv6,atm,x25¿Í °°Àº
+ÇÁ·ÎÅäÄÝ ½ºÅÃÀ» °¡Áö°í ÀÖ´Ù.
+
+11. Device Driver´Â ÇÏµåµð½ºÅ©, Å°º¸µå, ¸¶¿ì½º µîÀÇ µð¹ÙÀÌ½º
+µå¶óÀÌ¹ö¸¦ Æ÷ÇÔÇÏ°í ÀÖ´Â ºÎºÐÀÌ´Ù.
+
+
+#####Å©·Î½º ÄÄÆÄÀÏ
+Å©·Î½º ÄÄÆÄÀÏÀº ½ÇÇàµÇ´Â ÇÃ·§ÆûÀÌ ¾Æ´Ï¶ó ´Ù¸¥ ÇÃ·§Æû¿¡¼­µµ
+½ÇÇà °¡´ÉÇÑ ÄÚµå¸¦ ¸¸µå´Â °ÍÀ» ¶æÇÑ´Ù.
+
+
+
+ 
